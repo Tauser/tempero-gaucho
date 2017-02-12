@@ -4,19 +4,11 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
-    <!--<ion-searchbar
-    [(ngModel)]="searchTerm"
-    (ionInput)="filterItems()"
-    placeholder="Buscar ..." >
-  </ion-searchbar>-->
+
   </ion-navbar>
 </ion-header>
 <ion-content>
-  <ion-searchbar
-  [(ngModel)]="searchTerm"
-  (ionInput)="filterItems()"
-  placeholder="Buscar ..." >
-  </ion-searchbar>
+
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
        pullingIcon="arrow-dropdown"
@@ -27,9 +19,8 @@
  </ion-refresher>
 
   <ion-list>
-    <ion-item *ngFor="let p of pessoas">
-      <h2>{{p.nmPessoa}}</h2>
-      <p>{{p.dsEmail}}</p>
+    <ion-item >
+
     </ion-item>
   </ion-list>
 </ion-content>
