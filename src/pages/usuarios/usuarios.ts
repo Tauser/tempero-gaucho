@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController, ActionSheetController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { PessoaService } from '../../providers/pessoa-service';
