@@ -14,8 +14,8 @@ import 'rxjs/add/operator/distinctUntilChanged';
 export class UsuariosPage {
 
   public pessoas: Array<any>;
-  //private url: string = "http://www.temperogauchoce.com.br/temperogaucho/api/pessoas";
-  public url: string="http://localhost/temperogaucho/api/pessoas";
+  private url: string = "http://www.temperogauchoce.com.br/temperogaucho/api/pessoas";
+  //public url: string="http://localhost/temperogaucho/api/pessoas";
 
   public hasFilter: boolean = false;
   public noFilter: Array<any>;

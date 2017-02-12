@@ -14,8 +14,8 @@ import 'rxjs/add/operator/distinctUntilChanged';
 export class RotasPage {
 
   public rotas: Array<any>;
-  //private url: string = "http://www.temperogauchoce.com.br/temperogaucho/api/rotas";
-  public url: string="http://localhost/temperogaucho/api/rotas";
+  private url: string = "http://www.temperogauchoce.com.br/temperogaucho/api/rotas";
+  //public url: string="http://localhost/temperogaucho/api/rotas";
 
   public hasFilter: boolean = false;
   public noFilter: Array<any>;
