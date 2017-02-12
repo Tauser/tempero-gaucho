@@ -1,0 +1,54 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @Tauser
+ Sign out
+ Watch 2
+  Star 4
+  Fork 2 carloscabral/my-reader---Ionic2
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
+Branch: step1 Find file Copy pathmy-reader---Ionic2/.gitignore
+087634f  on 10 Oct 2016
+@carloscabral carloscabral Initial commit
+1 contributor
+RawBlameHistory
+35 lines (31 sloc)  425 Bytes
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+*~
+*.sw[mnpcod]
+*.log
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
+.vscode/
+npm-debug.log*
+
+.idea/
+.sass-cache/
+.tmp/
+.versions/
+coverage/
+dist/
+node_modules/
+tmp/
+temp/
+hooks/
+platforms/
+plugins/
+plugins/android.json
+plugins/ios.json
+www/
+$RECYCLE.BIN/
+
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
