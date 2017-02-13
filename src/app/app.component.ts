@@ -6,13 +6,17 @@ import { HomePage } from '../pages/home/home';
 import { UsuariosPage } from '../pages/usuarios/usuarios';
 import { RotasPage } from '../pages/rotas/rotas';
 
+import { LoginPage } from '../pages/login/login';
+import { AdminIniPage } from '../pages/admin-ini/admin-ini';
+import { ClienteIniPage } from '../pages/cliente-ini/cliente-ini';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 

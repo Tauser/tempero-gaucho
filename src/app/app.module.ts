@@ -7,12 +7,19 @@ import { RotasPage } from '../pages/rotas/rotas';
 import { PessoaService } from '../providers/pessoa-service';
 import { RotasService } from '../providers/rotas-service';
 
+import { LoginPage } from '../pages/login/login';
+import { AdminIniPage } from '../pages/admin-ini/admin-ini';
+import { ClienteIniPage } from '../pages/cliente-ini/cliente-ini';
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     UsuariosPage,
-    RotasPage
+    RotasPage,
+    LoginPage,
+    AdminIniPage,
+    ClienteIniPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -22,7 +29,10 @@ import { RotasService } from '../providers/rotas-service';
     MyApp,
     HomePage,
     UsuariosPage,
-    RotasPage
+    RotasPage,
+    LoginPage,
+    AdminIniPage,
+    ClienteIniPage
   ],
   //providers: [{provide: [ErrorHandler, PessoaService], useClass: IonicErrorHandler}]
   providers: [PessoaService, RotasService]
