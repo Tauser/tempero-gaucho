@@ -65,5 +65,28 @@ export class RotasPage {
     });
   }
 
+  //metodo Insert
+  Insert(rota)
+  {
+    var url = url+'?insert&dsRota='+rota;
+    var response = this.http.get(url).map(res => res.json());
+    return response;
+  }
+
+  Delete(id)
+  {
+    var url = url+'?delete&idRota='+id;
+    var response = this.http.get(url).map(res => res.json());
+    return response;
+
+  }
+
+  Edit(id,rota)
+  {
+    var url = url+'?r=members/editmembers&dsRota='+rota+'&id='+id;
+    var response = this.http.get(url).map(res => res.json());
+    return response;
+  }
+
 
 }

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { Page1 } from '../page1/page1';
 import { AdminIniPage } from '../admin-ini/admin-ini';
 import { ClienteIniPage } from '../cliente-ini/cliente-ini';
 
@@ -27,8 +26,8 @@ export class LoginPage {
    private alert :AlertController, private loading : LoadingController) {
 
     this.data = {};
-    this.data.username = "admin";
-    this.data.password = "123";
+    this.data.username = "";
+    this.data.password = "";
 
   }
 
@@ -36,33 +35,33 @@ export class LoginPage {
       let username = this.data.username;
       let password = this.data.password;
       let data = JSON.stringify({username, password});
-      //let link = "http://www.temperogauchoce.com.br/temperogaucho/api/pessoas"      
-      //let link = "http://localhost:8050/temperogaucho/api/pessoas/validaLogin/credenciais?dsLogin=" + username + "&dsSenha=" + password;
+      //let link = "http://www.temperogauchoce.com.br/temperogaucho/api/pessoas"
+      //let link = "http://localhost/temperogaucho/api/pessoas/validaLogin/credenciais?dsLogin=" + username + "&dsSenha=" + password;
       let link = "http://www.temperogauchoce.com.br/temperogaucho/api/pessoas/validaLogin/credenciais?dsLogin=" + username + "&dsSenha=" + password;
       //let link = "http://localhost:8050/temperogaucho/api/Example";
       console.log(link);
-      
+
       this.http.get(link)
-        .map(res => res.json())        
+        .map(res => res.json())
         .subscribe(data =>{
 
           //let loader = this.loading.create({
           //    content: "Checando ! Por favor espere..",
           //    duration: 1000
           //});
-          //loader.present();           
-          
+          //loader.present();
+
           this.fetchdata = data;
-          
+
           //Redireciona usuário de acordo com perfil
           if (data == "1"){
-            //Perfil Administrador  
+            //Perfil Administrador
             this.navCtrl.setRoot(AdminIniPage);
 
           }else if (data == "2") {
             //Perfil Cliente
             this.navCtrl.setRoot(ClienteIniPage);
-          
+
         }
           else{
             let alert = this.alert.create({
@@ -70,16 +69,16 @@ export class LoginPage {
             subTitle:"Credenciais inválidas! Tente novamente.",
             buttons: ['OK']
           })
-          alert.present(); 
-          }          
+          alert.present();
+          }
         }, error => {
           let alert = this.alert.create({
             title:"Warning",
             subTitle:"Credenciais inválidas! Tente novamente.",
             buttons: ['OK']
           })
-          alert.present();          
-        });                        
+          alert.present();
+        });
 
   }
 
