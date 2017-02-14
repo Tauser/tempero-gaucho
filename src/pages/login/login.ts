@@ -53,14 +53,7 @@ export class LoginPage {
         .map(res => res.json())
         .subscribe(data =>{
 
-          //let loader = this.loading.create({
-          //    content: "Checando ! Por favor espere..",
-          //    duration: 1000
-          //});
-          //loader.present();
-
           this.fetchdata = data;
-
           //Redireciona usuário de acordo com perfil
           if (data == "1"){
             //Perfil Administrador
@@ -93,7 +86,6 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-
 
 
   cadastro() {

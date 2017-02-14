@@ -3,6 +3,7 @@ import { NavController, AlertController, LoadingController, NavParams } from 'io
 import { Http } from '@angular/http';
 import { PessoaService} from "../../providers/pessoa-service";
 import { Pessoa } from "../../model/pessoa";
+import {Observable} from 'rxjs/Rx';
 
 
 @Component({
@@ -20,8 +21,18 @@ export class LoginCadastroPage {
     this.pessoa = new Pessoa();
   }
 
-  registrar(url){
-   this.pessoaService.insere(this.pessoa, this.url);
+
+  registrar() {
+    let pessoa = this.pessoa;
+    this.pessoaService.insere(pessoa).subscribe(
+       data => {
+         return true;
+       },
+       error => {
+         console.error("Erro ao cadastrar Usuario!");
+         return Observable.throw(error);
+       }
+    );
   }
 
 }

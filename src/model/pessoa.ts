@@ -1,4 +1,5 @@
 export class Pessoa {
+
   idPessoa:number;
   nmPessoa:string;
   dsLogin:string;
@@ -11,4 +12,5 @@ export class Pessoa {
   nrTelefone:string;
   nrCelular:string;
   idRota:number;
+
 }

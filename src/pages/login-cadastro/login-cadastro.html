@@ -34,6 +34,14 @@
       </ion-item>
 
       <ion-item>
+      <ion-label stacked>Rota de Entrega</ion-label>
+      <ion-select  [(ngModel)]="pessoa.idRota">
+        <ion-option value=1>Serrinha</ion-option>
+        <ion-option value=2>Aeroporto</ion-option>
+      </ion-select>
+    </ion-item>
+
+      <ion-item>
       <ion-label stacked>Telefone</ion-label>
       <ion-input type="text" [(ngModel)]="pessoa.nrTelefone"></ion-input>
       </ion-item>
