@@ -6,24 +6,20 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Login/Register</ion-title>
+    <ion-title>Login</ion-title>
   </ion-navbar>
 </ion-header>
 
+<ion-content padding>
+    <div>
+      <ion-item>
+        <ion-input type="text" placeholder="Username" [(ngModel)]="data.username"></ion-input>
+      </ion-item>
 
-<ion-content padding="10px">
-  <div>
-    <ion-item>
-      <ion-input type="text" placeholder="Username" [(ngModel)]="data.username"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input type="password" placeholder="Password" [(ngModel)]="data.password"></ion-input>
-    </ion-item>
-  </div>
-
-
-  <button ion-button color="primary" full (click)="login()">Login</button>
-  <button ion-button color="primary" full (click)="register()">Registre-se</button>
-
+      <ion-item>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="data.password"></ion-input>
+      </ion-item>
+    </div>
+    <button ion-button color="primary" (click)="login()">Login</button>
+    <button ion-button color="secundary" (click)="cadastro()">Registre-se</button>
 </ion-content>

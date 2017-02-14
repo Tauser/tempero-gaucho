@@ -1,0 +1,73 @@
+<!--
+  Generated template for the LoginCadastro page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> Cadastre-se </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item-group>
+    <ion-item-divider color="light">
+      Dados Pessoais
+    </ion-item-divider>
+
+      <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" required  [(ngModel)]="pessoa.nmPessoa" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>E-mail</ion-label>
+      <ion-input type="email" [(ngModel)]="pessoa.dsEmail"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>Endereço</ion-label>
+      <ion-input type="text" [(ngModel)]="pessoa.dsEnderecoResidencial"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>Telefone</ion-label>
+      <ion-input type="text" [(ngModel)]="pessoa.nrTelefone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>Celular</ion-label>
+      <ion-input type="text" [(ngModel)]="pessoa.nrCelular"></ion-input>
+      </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+      <ion-item-divider color="light">
+        Dados de Acesso
+      </ion-item-divider>
+
+      <ion-item>
+      <ion-label stacked>Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="pessoa.dsLogin"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="pessoa.dsSenha"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label stacked>Confirmação de Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="pessoa.dsSenha2"></ion-input>
+      </ion-item>
+
+  </ion-item-group>
+
+  <div padding>
+    <button ion-button color="primary" full (click)="registrar()">Cadastrar-se</button>
+  </div>
+
+</ion-content>

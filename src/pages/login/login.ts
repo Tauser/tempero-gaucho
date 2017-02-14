@@ -4,17 +4,19 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { AdminIniPage } from '../admin-ini/admin-ini';
 import { ClienteIniPage } from '../cliente-ini/cliente-ini';
-
+import { LoginCadastroPage } from '../login-cadastro/login-cadastro';
 /*
   Generated class for the Login page.
 
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
+
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
 })
+
 export class LoginPage {
 
   data :any;
@@ -22,8 +24,14 @@ export class LoginPage {
 
   pessoas: any[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http,
-   private alert :AlertController, private loading : LoadingController) {
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private http: Http,
+    private alert :AlertController,
+    private loading : LoadingController) {
+
 
     this.data = {};
     this.data.username = "";
@@ -65,7 +73,7 @@ export class LoginPage {
         }
           else{
             let alert = this.alert.create({
-            title:"Warning",
+            title:"Aviso",
             subTitle:"Credenciais inválidas! Tente novamente.",
             buttons: ['OK']
           })
@@ -73,7 +81,7 @@ export class LoginPage {
           }
         }, error => {
           let alert = this.alert.create({
-            title:"Warning",
+            title:"Aviso",
             subTitle:"Credenciais inválidas! Tente novamente.",
             buttons: ['OK']
           })
@@ -84,6 +92,12 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+
+
+  cadastro() {
+    this.navCtrl.push(LoginCadastroPage);
   }
 
 }
