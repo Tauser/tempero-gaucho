@@ -10,6 +10,7 @@ import { RotasService } from '../providers/rotas-service';
 import { LoginPage } from '../pages/login/login';
 import { AdminIniPage } from '../pages/admin-ini/admin-ini';
 import { ClienteIniPage } from '../pages/cliente-ini/cliente-ini';
+import { Auth } from '../providers/auth';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,6 @@ import { ClienteIniPage } from '../pages/cliente-ini/cliente-ini';
     ClienteIniPage
   ],
   //providers: [{provide: [ErrorHandler, PessoaService], useClass: IonicErrorHandler}]
-  providers: [PessoaService, RotasService]
+  providers: [PessoaService, RotasService, Auth]
 })
 export class AppModule {}

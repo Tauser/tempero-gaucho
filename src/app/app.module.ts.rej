@@ -1,0 +1,9 @@
+diff a/src/app/app.module.ts b/src/app/app.module.ts	(rejected hunks)
+@@ -23,7 +23,6 @@
+     RotasPage,
+     LoginPage,
+     AdminIniPage,
+-    ClienteIniPage
+     ClienteIniPage,
+     LoginCadastroPage
+   ],

@@ -34,7 +34,7 @@ export class RotasPage {
   }
 
   //Metodo para carregar dados dos clientes
-  fetchContent ():void {
+  fetchContent():void {
     let loading = this.loadingCtrl.create({
       content: 'carregando ...'
     });

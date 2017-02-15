@@ -9,6 +9,7 @@ import { RotasPage } from '../pages/rotas/rotas';
 import { LoginPage } from '../pages/login/login';
 import { AdminIniPage } from '../pages/admin-ini/admin-ini';
 import { ClienteIniPage } from '../pages/cliente-ini/cliente-ini';
+import { Auth } from '../pproviders/auth';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,18 +19,25 @@ export class MyApp {
 
   rootPage: any = LoginPage;
 
-  pages: Array<{title: string, component: any}>;
-
+  adminPages: Array<{title: string, component: any}>;
+  clientPages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
+    
+    //Lista paginas admin
+    this.adminPages = [
       { title: 'Home', component: HomePage },
       { title: 'Usuarios', component: UsuariosPage },
       { title: 'Rotas', component: RotasPage}
     ];
+
+    //Lista paginas cliente
+    this.clientPages = [
+      { title: 'Cliente', component: ClienteIniPage }
+    ];    
 
   }
 
@@ -46,5 +54,11 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  logOut(){
+
+    this.nav.setRoot(LoginPage);
+
   }
 }
